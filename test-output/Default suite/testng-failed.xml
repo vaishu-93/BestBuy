@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.bestbuy.test.SignUpPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="detail"/>
+          <include name="tearDown"/>
+          <include name="TC001_signUp"/>
+          <include name="startReport"/>
+          <include name="testDetails"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.SignUpPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

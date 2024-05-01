@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.bestbuy.test.SignUpPageTest">
+      <class name="com.bestbuy.test.LoginInvalidTest">
         <methods>
           <include name="setup"/>
           <include name="detail"/>
           <include name="tearDown"/>
-          <include name="TC001_signUp"/>
+          <include name="TC012_accountLoginwithInvalidCredentials"/>
           <include name="startReport"/>
           <include name="testDetails"/>
           <include name="endReport"/>
         </methods>
-      </class> <!-- com.bestbuy.test.SignUpPageTest -->
+      </class> <!-- com.bestbuy.test.LoginInvalidTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

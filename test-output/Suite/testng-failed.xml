@@ -3,34 +3,61 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.bestbuy.test.LoginPageTest">
+      <class name="com.bestbuy.test.ShopByBrandTest">
         <methods>
+          <include name="TC007_shopByBrand"/>
           <include name="setup"/>
+          <include name="detail"/>
           <include name="tearDown"/>
-          <include name="TC002_accountLogin"/>
+          <include name="testDetails"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
         </methods>
-      </class> <!-- com.bestbuy.test.LoginPageTest -->
+      </class> <!-- com.bestbuy.test.ShopByBrandTest -->
       <class name="com.bestbuy.test.SignUpPageTest">
         <methods>
           <include name="setup"/>
+          <include name="detail"/>
           <include name="tearDown"/>
           <include name="TC001_signUp"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="testDetails"/>
         </methods>
       </class> <!-- com.bestbuy.test.SignUpPageTest -->
       <class name="com.bestbuy.test.CheckMenuLinksNavigationTest">
         <methods>
           <include name="setup"/>
-          <include name="TC005_menuLinksNavigation"/>
+          <include name="detail"/>
           <include name="tearDown"/>
+          <include name="TC004_menuLinksNavigation"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="testDetails"/>
         </methods>
       </class> <!-- com.bestbuy.test.CheckMenuLinksNavigationTest -->
       <class name="com.bestbuy.test.ProductCheckoutTest">
         <methods>
           <include name="setup"/>
+          <include name="detail"/>
           <include name="tearDown"/>
+          <include name="startReport"/>
           <include name="TC008_productCheckout"/>
+          <include name="endReport"/>
+          <include name="testDetails"/>
         </methods>
       </class> <!-- com.bestbuy.test.ProductCheckoutTest -->
+      <class name="com.bestbuy.test.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testDetails"/>
+          <include name="detail"/>
+          <include name="tearDown"/>
+          <include name="startReport"/>
+          <include name="TC002_accountLogin"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.LoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

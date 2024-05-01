@@ -13,19 +13,19 @@ public class SignUpwithInvalidCredentials extends BestBuyBase {
 
 	@BeforeTest
 	public void testDetails() {
-		testName = "TC011_signUpInvalid";
+		testName = "TC009_signUpInvalid";
 		testDescription = "Validating the BestBuy signup page with invalid credentials";
 		testAuthor = "Vaishali";
 	}
 
 	@Test
-	public void TC011_signUpInvalid() throws IOException, InterruptedException {
+	public void TC009_signUpInvalid() throws IOException, InterruptedException {
 		CountryPage countryPage = new CountryPage();
 		countryPage.selectCountry();
 		SignUpPage signUpPage = new SignUpPage();
 		signUpPage.signUpInvalid();
 		assert (signUpPage.signInerrortext().contains("Please enter your last name."));
-		takeScreenshot("TC011_signUpInvalid");
+		takeScreenshot("TC009_signUpInvalid");
 		if(signUpPage.signInerrortext().contains("Please enter your last name.")) {
 			test.pass("SignUp with invalid credentials test passed");
 		}

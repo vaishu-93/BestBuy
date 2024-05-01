@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import com.aventstack.extentreports.Status;
 import com.bestbuy.base.BestBuyBase;
 import com.bestbuy.objects.CountryPage;
 import com.bestbuy.objects.HomePage;
@@ -22,19 +23,24 @@ public class ProductAddtoCartTest extends BestBuyBase {
 
 	@BeforeTest
 	public void testDetails() {
-		testName = "TC004_addToCart";
+		testName = "TC006_addToCart";
 		testDescription = "Validating if a product could be added to cart";
 		testAuthor = "Vaishali";
 	}
 	
 	@Test()
-	public void TC004_addToCart() throws IOException {
+	public void TC006_addToCart() throws IOException {
 		CountryPage countryPage = new CountryPage();
 		countryPage.selectCountry();
 		HomePage homepage = new HomePage();
 		homepage.searchProduct("iphone");
 		Assert.assertEquals(homepage.addedtocart(), "Added to cart");
-		takeScreenshot("TC004_addToCart");
+		takeScreenshot("TC006_addToCart");
+		if(homepage.addedtocart().contains("Added to cart")){
+			test.log(Status.PASS, "Product add to cart test passed");
+		}
+		else
+			test.log(Status.FAIL, "Product add to cart test failed");
 	}
 
 }

@@ -6,6 +6,7 @@ import java.net.URL;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.bestbuy.base.BestBuyBase;
 
 public class CheckBrokenUrlTest extends BestBuyBase {
@@ -33,9 +34,9 @@ public class CheckBrokenUrlTest extends BestBuyBase {
 			}
 		takeScreenshot("TC003_checkBrokenUrl");
 		if (httpURLConnection.getResponseCode() == 200) {
-			test.pass("Checking broken url test passed");
+			test.log(Status.PASS,"Checking broken url test passed");
 		}
 		else
-			test.fail("Checking broken url test failed");
+			test.log(Status.FAIL,"Checking broken url test failed");
 	}
 }

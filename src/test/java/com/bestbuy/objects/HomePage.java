@@ -57,7 +57,7 @@ public class HomePage extends BestBuyBase {
 	@FindBy(xpath = "//button[contains(text(),'TVs by Brand')]")
 	private WebElement tvBrand;
 
-	@FindBy(xpath = "//a[text()='Sony - 55\" Class X77L LED 4K UHD Smart Google TV']")
+	@FindBy(xpath = "//a[text()='Sony - 65\" class BRAVIA XR A75L OLED 4K UHD Smart Google TV']")
 	private WebElement tvModel;
 
 	@FindBy(xpath = "//button[contains(text(),'Brands')]")
@@ -168,7 +168,7 @@ public class HomePage extends BestBuyBase {
 		tvMenu.click();
 		tvBrand.click();
 		sonyBrand.click();
-		// scroll(tvModel);
+		scroll();
 		tvModel.click();
 		scrollToElement(addtocart);
 		wait(addtocart);

@@ -54,9 +54,9 @@ public class SignUpPage extends BestBuyBase {
 		account.click();
 		wait(createAccount);
 		createAccount.click();
-		firstName.sendKeys("meha");
-		lastName.sendKeys("john");
-		email.sendKeys("mehajohn003@gmail.com");
+		firstName.sendKeys("Asha");
+		lastName.sendKeys("Harsh");
+		email.sendKeys("Harshasha09@gmail.com");
 		password.sendKeys("Rulesforme@123");
 		password1.sendKeys("Rulesforme@123");
 		phone.sendKeys("9008765432");

@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.bestbuy.base.BestBuyBase;
 import com.bestbuy.objects.CountryPage;
 import com.bestbuy.objects.HomePage;
@@ -30,5 +31,11 @@ public class ProductCheckoutTest extends BestBuyBase {
 		shippage.shippingDetails();
 		Assert.assertEquals(shippage.cardinfo(), "Please enter a valid card number.");
 		takeScreenshot("TC008_productCheckout");
+		if(shippage.cardinfo().contains("Please enter a valid card number."))
+				{
+			test.log(Status.PASS, "Product checkout test passed");
+				}
+		else
+			test.log(Status.FAIL, "Product checkout test failed");
 	}
 }

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.bestbuy.base.BestBuyBase;
 import com.bestbuy.objects.CountryPage;
 import com.bestbuy.objects.SignUpPage;
@@ -27,9 +28,9 @@ public class SignUpPageTest extends BestBuyBase {
 		assert (signUpPage.signInText().contains("Hi"));
 		takeScreenshot("TC001_signUp");
 		if(signUpPage.signInText().contains("Hi")) {
-			test.pass("SignUp with valid details passed");
+			test.log(Status.PASS,"SignUp with valid details passed");
 		}
 		else
-			test.fail("SignUp with valid details failed");
+			test.log(Status.FAIL,"SignUp with valid details failed");
 	}
 }

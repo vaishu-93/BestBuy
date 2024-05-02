@@ -79,7 +79,7 @@ public class Utils {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("javascript:window.scrollBy(0,450)");
 	}
-
+	
 	public static void wait(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
